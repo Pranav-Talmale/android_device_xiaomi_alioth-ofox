@@ -11,7 +11,7 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
      
-#Copy DT files to out/target/.../recovery/root
+#Fix
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)     
      
 # Keylayout
