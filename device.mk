@@ -10,12 +10,9 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-#Init Recovery 
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
-     $(LOCAL_PATH)/recovery/root/init.recovery.qcom_decrypt.fbe.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom_decrypt.fbe.rc \
-     $(LOCAL_PATH)/recovery/root/init.recovery.qcom_decrypt.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom_decrypt.rc 
+     
+#Copy DT files to out/target/.../recovery/root
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)     
      
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -81,4 +78,8 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/alioth/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+    
+# otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    $(LOCAL_PATH)/security/releasekey    
 
