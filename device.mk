@@ -6,13 +6,13 @@
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 #$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
 
-#PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
      
-#Fix
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/recovery/root,$(TARGET_COPY_OUT_RECOVERY)/root)     
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc    
      
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -81,6 +81,5 @@ PRODUCT_COPY_FILES += \
     
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
-    
+    vendor/recovery/security/miui   
 

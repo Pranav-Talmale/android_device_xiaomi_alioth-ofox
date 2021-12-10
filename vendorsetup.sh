@@ -39,10 +39,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
         export OF_AB_DEVICE=1
         export OF_SKIP_FBE_DECRYPTION=1
-        export OF_MAINTAINER="Pranav Talmale"
  	export ALLOW_MISSING_DEPENDENCIES=true
 	export TARGET_DEVICE_ALT="aliothin"
-        export FOX_VERSION="R11.1_0"
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export OF_USE_GREEN_LED=0
@@ -52,9 +50,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	export OF_NO_MIUI_PATCH_WARNING=1
+	export FOX_USE_GREP_BINARY=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
 	export FOX_USE_TAR_BINARY=1
+	export FOX_USE_ZIP_BINARY=1
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
@@ -77,9 +77,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_RIGHT=48
 	export OF_CLOCK_POS=1
 
-	# maximum permissible splash image size (in kilobytes); do *NOT* increase!
-	export OF_SPLASH_MAX_SIZE=104
-
+        #Maintainer Stuff
+        export OF_MAINTAINER="Pranav Talmale"
+        export FOX_VERSION="R11.1_0"
+        export OF_MAINTAINER_AVATAR="/home/pranav/Desktop/avatar.png"
+        
 	# run a process after formatting data to work-around MTP issues
 	export OF_RUN_POST_FORMAT_PROCESS=1
 
