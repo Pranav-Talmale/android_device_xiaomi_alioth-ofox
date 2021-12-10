@@ -10,7 +10,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 #Audio
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/alioth/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
-     
+ 
+#Init Recovery
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc    
      
