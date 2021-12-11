@@ -35,36 +35,24 @@ if [ -z "$"1"" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$"1"" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-
-        #Language
    	export TW_DEFAULT_LANGUAGE="en"
-   	
-   	#Building
 	export LC_ALL="C"
         export FOX_MANIFEST_VER="11.0"
  	export ALLOW_MISSING_DEPENDENCIES=true
 	export TARGET_DEVICE_ALT="aliothin"
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
-        
-        #Debug
         export FOX_INSTALLER_DEBUG_MODE="1"
         export FOX_BUILD_DEBUG_MESSAGES="1"
         export OF_IGNORE_LOGICAL_MOUNT_ERRORS="1"
-        
-        #Binaries
         export FOX_USE_SED_BINARY="1"
 	export FOX_USE_XZ_UTILS="1"
 	export FOX_USE_GREP_BINARY="1"
 	export FOX_USE_BASH_SHELL="1"
 	export FOX_ASH_IS_BASH="1"
         export FOX_USE_TAR_BINARY="1"
-	
-	#Magiskboot
 	export OF_USE_MAGISKBOOT="1"
 	export OF_USE_NEW_MAGISKBOOT="1"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
-
-        # OTA & MIUI
         export OF_KEEP_DM_VERITY="1"
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES="1"
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
@@ -74,30 +62,20 @@ if [ "$"1"" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
         export OF_PATCH_AVB20="1"
         export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"
-        
-        #Backup
         export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
         export OF_QUICK_BACKUP_LIST="/boot;/data;"
-
-	# screen settings
 	export OF_SCREEN_H=2400
 	export OF_STATUS_H=100
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48
 	export OF_CLOCK_POS="1"
-	
-	#Partitions
         export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export OF_VIRTUAL_AB_DEVICE="1"
         export OF_AB_DEVICE="1"
-        
-        #Features
         export FOX_ENABLE_APP_MANAGER=0
         export FOX_DELETE_AROMAFM="1"
         export OF_USE_GREEN_LED=0
-        
-        #Maintainer Stuff
         export OF_MAINTAINER="Pranav Talmale"
         export FOX_VERSION="R11.1_0"
         
