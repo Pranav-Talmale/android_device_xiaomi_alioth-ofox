@@ -1,0 +1,38 @@
+[
+ {
+    "remote":      "GitHub",
+    "repository":  "Pranav-Talmale/android_device_xiaomi_sm8250-common",
+    "target_path": "device/xiaomi/sm8250-common",
+    "revision":    "android-11"
+ },
+ {
+    "remote":      "GitHub",
+    "repository":  "Pranav-Talmale/android_kernel_xiaomi_alioth",
+    "target_path": "kernel/xiaomi/alioth",
+    "revision":    "android-11"
+ },
+  {
+    "remote":      "TeamWin",
+    "repository":  "android_device_qcom_twrp-common",
+    "target_path": "device/qcom/twrp-common",
+    "revision":    "android-11"
+ },
+  {
+    "remote": "LineageOS",
+    "repository": "android_hardware_qcom_bootctrl",
+    "target_path": "hardware/qcom-caf/bootctrl",
+    "revision": "lineage-18.1-caf"
+  },
+  {
+    "remote": "LineageOS",
+    "repository": "android_vendor_qcom_opensource_display-commonsys-intf",
+    "target_path": "vendor/qcom/opensource/commonsys-intf/display",
+    "revision": "lineage-18.1"
+  },
+  {
+    "remote": "LineageOS",
+    "repository": "android_vendor_qcom_opensource_interfaces",
+    "target_path": "vendor/qcom/opensource/interfaces",
+    "revision": "lineage-18.1"
+  }
+]
