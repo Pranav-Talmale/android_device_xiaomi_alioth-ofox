@@ -58,6 +58,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_ASH_IS_BASH="1"
         export FOX_USE_TAR_BINARY="1"
 
+        #Magisk
+	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-23.0.zip
+
 	#Magiskboot
 	export OF_USE_MAGISKBOOT="1"
 	export OF_USE_NEW_MAGISKBOOT="1"
