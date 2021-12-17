@@ -42,6 +42,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
         export FOX_MANIFEST_VER="11.0"
  	export ALLOW_MISSING_DEPENDENCIES=true
+	export OF_TARGET_DEVICES="aliothin,alioth"
 	export TARGET_DEVICE_ALT="aliothin"
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 
