@@ -114,7 +114,6 @@ service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
     group system input
     seclabel u:r:recovery:s0
     
-
 service unified-script /system/bin/unified-script.sh
     user root
     group root
