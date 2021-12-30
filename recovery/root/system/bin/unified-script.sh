@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# This script is needed to automatically set device props.
+# set a couple of props, depending on device
 
 
 load_INDIA()
@@ -25,6 +25,7 @@ load_CN()
     resetprop "ro.build.product" "alioth"
     resetprop "ro.product.device" "alioth"
     resetprop "ro.vendor.product.device" "alioth"
+    
 }
 
 load_global()
@@ -40,10 +41,10 @@ load_global()
 
 }
 
-project=$(getprop ro.boot.hwc)
-echo $project
+variant$(getprop ro.boot.hwc)
+echo $variant
 
-case $project in
+case $variant in
     "INDIA")
         load_INDIA
         ;;
