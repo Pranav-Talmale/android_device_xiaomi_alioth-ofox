@@ -46,19 +46,6 @@ load_CN()
     resetprop "ro.product.system_ext.brand" "Xiaomi"
     resetprop "ro.product.product.brand" "Xiaomi"
     resetprop "ro.product.vendor.brand" "Xiaomi"
-    resetprop "ro.product.system.name" "fox_alioth"
-    resetprop "ro.product.vendor.name" "fox_alioth"
-    resetprop "ro.product.system_ext.name" "fox_alioth"
-    resetprop "ro.product.odm.name" "fox_alioth"
-    resetprop "ro.product.product.name" "fox_alioth"
-    resetprop "ro.product.name" "alioth"
-    resetprop "ro.build.product" "alioth"
-    resetprop "ro.product.device" "alioth"
-    resetprop "ro.vendor.product.device" "alioth"
-    resetprop "ro.system.product.device" "alioth"
-    resetprop "ro.system_ext.product.device" "alioth"
-    resetprop "ro.odm.product.device" "alioth"
-    resetprop "ro.product.product.device" "alioth"
     
 }
 
@@ -76,19 +63,7 @@ load_global()
     resetprop "ro.product.system_ext.brand" "POCO"
     resetprop "ro.product.product.brand" "POCO"
     resetprop "ro.product.vendor.brand" "POCO"
-    resetprop "ro.product.system.name" "fox_alioth"
-    resetprop "ro.product.vendor.name" "fox_alioth"
-    resetprop "ro.product.system_ext.name" "fox_alioth"
-    resetprop "ro.product.odm.name" "fox_alioth"
-    resetprop "ro.product.product.name" "fox_alioth"
-    resetprop "ro.product.name" "alioth"
-    resetprop "ro.build.product" "alioth"
-    resetprop "ro.product.device" "alioth"
-    resetprop "ro.vendor.product.device" "alioth"
-    resetprop "ro.system.product.device" "alioth"
-    resetprop "ro.system_ext.product.device" "alioth"
-    resetprop "ro.odm.product.device" "alioth"
-    resetprop "ro.product.product.device" "alioth"
+
 
 }
 
