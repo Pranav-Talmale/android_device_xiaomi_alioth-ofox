@@ -41,7 +41,7 @@ load_global()
 
 }
 
-variant$(getprop ro.boot.hwc)
+variant=$(getprop ro.boot.hwc)
 echo $variant
 
 case $variant in
