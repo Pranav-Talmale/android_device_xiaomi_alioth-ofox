@@ -61,7 +61,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_NANO_EDITOR="1"
 
         #Magisk
-	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-alpha.zip
+	export FOX_USE_SPECIFIC_MAGISK_ZIP="$(DEVICE_PATH)/Magisk/Magisk-v24.0.zip"
 
 	#Magiskboot
 	export OF_USE_MAGISKBOOT="1"
