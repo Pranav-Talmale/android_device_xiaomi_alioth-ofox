@@ -27,6 +27,12 @@ $(call inherit-product, \
 
 # A/B
 ENABLE_VIRTUAL_AB := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+	android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
      
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
