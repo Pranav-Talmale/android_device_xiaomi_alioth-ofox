@@ -61,12 +61,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_NANO_EDITOR="1"
 
         #Magisk
-	export FOX_USE_SPECIFIC_MAGISK_ZIP="~/home/pranav/fox_11.0/device/xiaomi/alioth/Magisk/Magisk-v24.0.zip"
+	export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/pranav/fox_11.0/device/xiaomi/alioth/Magisk/Magisk-v24.1.zip"
 
 	#Magiskboot
 	export OF_USE_MAGISKBOOT="1"
-	export OF_USE_NEW_MAGISKBOOT="1"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
+	export OF_PATCH_VBMETA_FLAG="1"
 
         # OTA & MIUI
         export OF_KEEP_DM_VERITY="1"
