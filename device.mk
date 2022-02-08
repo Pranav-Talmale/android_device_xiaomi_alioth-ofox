@@ -24,15 +24,15 @@ PRODUCT_COPY_FILES += \
 # Virtual A/B OTA
 $(call inherit-product, \
     $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-# A/B
-ENABLE_VIRTUAL_AB := true
-
+    
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
 	android.hardware.fastboot@1.0-impl-mock.recovery \
-    fastbootd
+    fastbootd    
+
+# A/B
+ENABLE_VIRTUAL_AB := true
      
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -92,5 +92,29 @@ PRODUCT_COPY_FILES += \
     
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui   
+   $(LOCAL_PATH)/security/miui   
 
+# # SHRP specific device flags
+# SHRP_DEVICE_CODE := alioth
+# SHRP_PATH := device/xiaomi/alioth
+# SHRP_MAINTAINER := Pranav_Talmale
+# SHRP_REC_TYPE := SAR
+# SHRP_DEVICE_TYPE := A/B
+# SHRP_REC := /dev/block/bootdevice/by-name/boot
+# SHRP_EDL_MODE := 1
+# SHRP_INTERNAL := /sdcard
+# SHRP_EXTERNAL := /external_sd
+# SHRP_OTG := /usb_otg
+# SHRP_FLASH := 1
+# SHRP_AB := true
+# SHRP_STATUSBAR_RIGHT_PADDING := 48
+# SHRP_STATUSBAR_LEFT_PADDING := 48
+# SHRP_NOTCH := true
+# SHRP_EXPRESS := true
+# SHRP_EXPRESS_USE_DATA := true
+# SHRP_DARK := true
+# SHRP_CUSTOM_FLASHLIGHT := false
+# SHRP_FLASH_MAX_BRIGHTNESS := 300
+# SHRP_NO_SAR_AUTOMOUNT := true
+# SHRP_LITE := false
+# SHRP_OFFICIAL := true

@@ -1,0 +1,46 @@
+# For interfacing with PowerHAL
+hal_client_domain(hal_camera_default, hal_power)
+
+# Allow hal_camera_default to read to sysfs_kgsl
+r_dir_file(hal_camera_default, sysfs_kgsl)
+
+# Allow hal_camera_default to read to mnt/vendor/persist/camera
+r_dir_file(hal_camera_default, camera_persist_file)
+r_dir_file(hal_camera_default, mnt_vendor_file)
+r_dir_file(hal_camera_default, persist_sensors_file)
+
+allow hal_camera_default remosaic_daemon_service:service_manager find;
+
+allow hal_camera_default proc_stat:file read;
+
+set_prop(hal_camera_default, vendor_camera_prop)
+
+allow hal_camera_default socket_device:sock_file write;
+allow hal_camera_default proc_stat:file { open };
+allow hal_camera_default graphics_config_prop : file {open getattr map};
+allow hal_camera_default incremental_prop : file {open getattr map};
+allow hal_camera_default lmkd_prop : file {open getattr map};
+allow hal_camera_default logpersistd_logging_prop : file {open getattr map};
+allow hal_camera_default lowpan_prop : file {open getattr map};
+allow hal_camera_default serialno_prop : file {open getattr map};
+allow hal_camera_default vehicle_hal_prop : file {open getattr map};
+allow hal_camera_default vendor_cap_configstore_dbg_prop : file {open getattr map};
+allow hal_camera_default vendor_crash_cnt_prop: file {open getattr map};
+allow hal_camera_default vendor_ctl_netmgrd_prop: file {open getattr map};
+allow hal_camera_default vendor_ctl_qcrild_prop: file {open getattr map};
+allow hal_camera_default vendor_dcvs_prop: file {open getattr map};
+allow hal_camera_default vendor_disable_spu_prop: file {open getattr map};
+allow hal_camera_default vendor_displayfeature_prop: file {open getattr map};
+allow hal_camera_default vendor_face3d_producer_prop: file {open getattr map};
+allow hal_camera_default vendor_ipacm-diag_prop: file {open getattr map};
+allow hal_camera_default vendor_mdm_helper_prop: file {open getattr map};
+allow hal_camera_default vendor_mmi_prop: file {open getattr map};
+allow hal_camera_default vendor_mpctl_prop: file {open getattr map};
+allow hal_camera_default vendor_qcc_prop: file {open getattr map};
+allow hal_camera_default vendor_qvr_persist_prop : file {open getattr map};
+allow hal_camera_default vendor_qvrd_persist_prop: file {open getattr map};
+allow hal_camera_default vendor_qvrd_prop: file {open getattr map};
+allow hal_camera_default vendor_ramdump_prop: file {open getattr map};
+allow hal_camera_default vendor_scroll_prop: file {open getattr map};
+allow hal_camera_default vendor_slm_prop: file {open getattr map};
+allow hal_camera_default vendor_soc_id_prop: file {open getattr map};
