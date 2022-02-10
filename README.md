@@ -1,5 +1,4 @@
 # android_device_xiaomi_alioth-ofox
-# android_device_xiaomi_alioth
 For building OFRP for Xiaomi Mi 11X / Redmi K40 / POCO F3
 
 OrangeFox device tree for Xiaomi Mi 11X / Redmi K40 / POCO F3
