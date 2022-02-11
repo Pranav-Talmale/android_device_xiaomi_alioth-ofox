@@ -48,7 +48,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
         #Debug
         export FOX_INSTALLER_DEBUG_MODE="1"
-        export FOX_BUILD_DEBUG_MESSAGES="1"
         export OF_IGNORE_LOGICAL_MOUNT_ERRORS="1"
 
         #Binaries
