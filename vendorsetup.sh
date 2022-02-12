@@ -59,9 +59,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_USE_TAR_BINARY="1"
 	export FOX_USE_NANO_EDITOR="1"
 
-        #Magisk
-	export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/pranav/fox_11.0/device/xiaomi/alioth/Magisk/Magisk-v24.1.zip"
-
 	#Magiskboot
 	export OF_USE_MAGISKBOOT="1"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
@@ -97,7 +94,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         #Features
         export FOX_ENABLE_APP_MANAGER=0
         export FOX_DELETE_AROMAFM="1"
-        export OF_USE_GREEN_LED=0
+        export OF_USE_GREEN_LED="0"
+	export OF_NO_SPLASH_CHANGE="1"
+	export FOX_DELETE_MAGISK_ADDON="1"
 
         #Maintainer Stuff
         export OF_MAINTAINER="Pranav Talmale"
