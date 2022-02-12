@@ -177,14 +177,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     
-# Libshim
-#PRODUCT_PACKAGES += \
-    libhidlbase_shim
-    
-# Libshim
-#PRODUCT_PACKAGES += \
-    libandroid_runtime_shim
-    
 # Lights
 PRODUCT_PACKAGES += \
     lights.kona \
@@ -222,27 +214,6 @@ PRODUCT_PACKAGES += \
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-    
-# NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    libchrome.vendor \
-    NfcNci \
-    SecureElement \
-    Tag \
-    vendor.nxp.hardware.nfc@1.1 \
-    vendor.nxp.hardware.nfc@2.0 \
-    vendor.nxp.hardware.nfc@1.1.vendor \
-    vendor.nxp.hardware.nfc@2.0.vendor \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.1 \
-    android.hardware.secure_element@1.2
-    
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
     
 # OTA
 PRODUCT_HOST_PACKAGES += \
