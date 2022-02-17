@@ -7,9 +7,9 @@
  },
  {
     "remote":      "GitHub",
-    "repository":  "ArrowOS-Devices/android_kernel_xiaomi_alioth",
+    "repository":  "Pranav-Talmale/android_kernel_xiaomi_alioth",
     "target_path": "kernel/xiaomi/alioth",
-    "revision":    "android-12.0"
+    "revision":    "android-11"
  },
   {
     "remote": "LineageOS",
