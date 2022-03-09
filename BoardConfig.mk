@@ -71,6 +71,8 @@ BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 #A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
@@ -231,13 +233,6 @@ TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
-# Prebuilt Core
-
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
-TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 
 
