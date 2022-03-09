@@ -92,4 +92,4 @@ PRODUCT_COPY_FILES += \
     
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-   $(LOCAL_PATH)/security/miui   
+    vendor/recovery/security/miui
