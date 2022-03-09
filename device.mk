@@ -3,7 +3,7 @@
 #
 
 # Inherit from sm8250-common
-$(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
+$(call inherit-product, device/xiaomi/alioth/kona.mk)
 #$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 30
