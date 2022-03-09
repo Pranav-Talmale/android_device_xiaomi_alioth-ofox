@@ -1,12 +1,6 @@
 [
  {
     "remote":      "GitHub",
-    "repository":  "Pranav-Talmale/android_device_xiaomi_sm8250-common",
-    "target_path": "device/xiaomi/sm8250-common",
-    "revision":    "android-11"
- },
- {
-    "remote":      "GitHub",
     "repository":  "Pranav-Talmale/android_kernel_xiaomi_alioth",
     "target_path": "kernel/xiaomi/alioth",
     "revision":    "android-11"
