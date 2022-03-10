@@ -1,0 +1,20 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:FsCreateFile exfat
+alias symbol:FsRemoveFile exfat
+alias symbol:FsSetAttr exfat
+alias symbol:FsSyncVol exfat
+alias symbol:FsLookupFile exfat
+alias symbol:FsUmountVol exfat
+alias symbol:FsTruncateFile exfat
+alias symbol:FsWriteFile exfat
+alias symbol:FsReadDir exfat
+alias symbol:FsRemoveDir exfat
+alias symbol:FsWriteStat exfat
+alias symbol:FsMoveFile exfat
+alias symbol:FsCreateDir exfat
+alias symbol:FsReadStat exfat
+alias symbol:FsMountVol exfat
+alias symbol:FsReleaseCache exfat
+alias symbol:FsGetVolInfo exfat
+alias symbol:FsMapCluster exfat
+alias symbol:FsReadFile exfat
