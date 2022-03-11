@@ -1,10 +1,4 @@
 [
- {
-    "remote":      "GitHub",
-    "repository":  "Pranav-Talmale/android_kernel_xiaomi_alioth",
-    "target_path": "kernel/xiaomi/alioth",
-    "revision":    "android-11"
- },
   {
     "remote": "LineageOS",
     "repository": "android_hardware_qcom_bootctrl",
