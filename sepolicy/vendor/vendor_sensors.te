@@ -1,1 +1,0 @@
-allow  vendor_sensors vendor_sysfs_dynamic_fps : file { read open getattr};
