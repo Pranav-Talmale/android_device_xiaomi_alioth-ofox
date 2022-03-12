@@ -4,6 +4,12 @@
 
 ALLOW_MISSING_DEPENDENCIES := true
 
+# SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 29
+
+# VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 30
+
 # Inherit from sm8250-common
 #$(call inherit-product, device/xiaomi/alioth/kona.mk) (no longer needed since it has been merged)
 #$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
