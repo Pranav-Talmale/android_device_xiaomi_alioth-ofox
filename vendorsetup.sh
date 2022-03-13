@@ -36,15 +36,15 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         #Language
-   	export TW_DEFAULT_LANGUAGE="en"
+   	    export TW_DEFAULT_LANGUAGE="en"
 
-   	#Building
-	export LC_ALL="C"
+   	    #Building
+	    export LC_ALL="C"
         export FOX_MANIFEST_VER="11.0"
- 	export ALLOW_MISSING_DEPENDENCIES=true
-	export OF_TARGET_DEVICES="aliothin,alioth"
-	export TARGET_DEVICE_ALT="aliothin"
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
+ 	    export ALLOW_MISSING_DEPENDENCIES=true
+	    export OF_TARGET_DEVICES="aliothin,alioth"
+	    export TARGET_DEVICE_ALT="aliothin"
+	    export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 
         #Debug
         export FOX_INSTALLER_DEBUG_MODE="1"
@@ -52,17 +52,20 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
         #Binaries
         export FOX_USE_SED_BINARY="1"
-	export FOX_USE_XZ_UTILS="1"
-	export FOX_USE_GREP_BINARY="1"
-	export FOX_USE_BASH_SHELL="1"
-	export FOX_ASH_IS_BASH="1"
+	    export FOX_USE_XZ_UTILS="1"
+	    export FOX_USE_GREP_BINARY="1"
+	    export FOX_USE_BASH_SHELL="1"
+	    export FOX_ASH_IS_BASH="1"
         export FOX_USE_TAR_BINARY="1"
-	export FOX_USE_NANO_EDITOR="1"
+	    export FOX_USE_NANO_EDITOR="1"
 
-	#Magiskboot
-	export OF_USE_MAGISKBOOT="1"
-	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
-	export OF_PATCH_VBMETA_FLAG="1"
+	    #Magiskboot
+	    export OF_USE_MAGISKBOOT="1"
+	    export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
+	    export OF_PATCH_VBMETA_FLAG="1"
+
+	    #Magisk
+	    export FOX_USE_SPECIFIC_MAGISK_ZIP="/home/pranav/Magisk/Magisk-v24.3.zip"
 
         # OTA & MIUI
         export OF_KEEP_DM_VERITY="1"
@@ -79,31 +82,29 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
         export OF_QUICK_BACKUP_LIST="/boot;/data;"
 
-	# screen settings
-	export OF_SCREEN_H=2400
-	export OF_STATUS_H=100
-	export OF_STATUS_INDENT_LEFT=48
-	export OF_STATUS_INDENT_RIGHT=48
-	export OF_CLOCK_POS="1"
+	    # screen settings
+	    export OF_SCREEN_H=2400
+	    export OF_STATUS_H=100
+	    export OF_STATUS_INDENT_LEFT=48
+	    export OF_STATUS_INDENT_RIGHT=48
+	    export OF_CLOCK_POS="1"
 
-	#Partitions
+	    #Partitions
         export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-	export OF_VIRTUAL_AB_DEVICE="1"
+	    export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+	    export OF_VIRTUAL_AB_DEVICE="1"
 
         #Features
         export FOX_ENABLE_APP_MANAGER=0
         export FOX_DELETE_AROMAFM="1"
         export OF_USE_GREEN_LED="0"
-	export OF_NO_SPLASH_CHANGE="1"
-	export FOX_DELETE_MAGISK_ADDON="1"
 
         #Maintainer Stuff
         export OF_MAINTAINER="Pranav Talmale"
         export FOX_VERSION="R11.1_0"
 
-	# run a process after formatting data to work-around MTP issues
-	# export OF_RUN_POST_FORMAT_PROCESS="1"   disabling this since it causes issues with a12 decryption
+	    # run a process after formatting data to work-around MTP issues
+	    export OF_RUN_POST_FORMAT_PROCESS="1"
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
