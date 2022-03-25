@@ -9,10 +9,6 @@ BUILD_BROKEN_DUP_RULES := true
 
 DEVICE_PATH := device/xiaomi/alioth
 
-# Inherit from sm8250-common
-#-include device/xiaomi/sm8250-common/BoardConfigCommon.mk
-#-include vendor/xiaomi/alioth/BoardConfigVendor.mk
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -33,6 +29,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
+TARGET_USES_UEFI := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -72,28 +69,6 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-
-
-#A/B
-BOARD_USES_RECOVERY_AS_BOOT := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    odm \
-    product \
-    system \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vendor \
-    vendor_boot
-
-# HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

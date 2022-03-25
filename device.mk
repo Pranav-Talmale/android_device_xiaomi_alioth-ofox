@@ -4,10 +4,6 @@
 
 ALLOW_MISSING_DEPENDENCIES := true
 
-# Inherit from sm8250-common
-#$(call inherit-product, device/xiaomi/alioth/kona.mk) (no longer needed since it has been merged)
-#$(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
-
 # Ihnerit virtual_ab_ota product
 $(call inherit-product, \
     $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -22,27 +18,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 30
  
-#Init Recovery
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc    
-     
-# Virtual A/B OTA
-$(call inherit-product, \
-    $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-    
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd    
 
 # A/B
 ENABLE_VIRTUAL_AB := true
-     
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay 
-    
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
@@ -50,29 +37,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display
 
-#A/B
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
-
 PRODUCT_PACKAGES_DEBUG += update_engine_client
+
 PRODUCT_PACKAGES += \
   update_engine \
   update_engine_client \
   update_engine_sideload \
   update_verifier
-
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
@@ -83,19 +54,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
-# OTA
-PRODUCT_HOST_PACKAGES += \
-    signapk
 
 # Crypto
 TW_INCLUDE_CRYPTO := true

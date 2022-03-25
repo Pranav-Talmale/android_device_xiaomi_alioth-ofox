@@ -1,4 +1,7 @@
+# ADB
 ro.adb.secure=0
+
+# Dynamic Partitions
 ro.boot.dynamic_partitions=true
 
 # Gatekeeper
@@ -7,5 +10,3 @@ vendor.gatekeeper.disable_spu=true
 # Battery Property
 ro.charger.enable_suspend=1
 
-# Android 12
-ro.build.version.release=12
