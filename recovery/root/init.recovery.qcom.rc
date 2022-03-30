@@ -49,8 +49,7 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
     insmod /vendor/lib/modules/exfat_miui.ko
-    install_keyring
-
+    
 on early-fs
     write /proc/sys/kernel/sched_lib_name "recovery,Updater,updater,update_engine_sideload"
     write /proc/sys/kernel/sched_lib_mask_force 255
@@ -131,12 +130,19 @@ on boot
     start health-hal-2-1
     start vendor.qti.vibrator
     setprop sys.usb.config adb
+    
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring    
 
-on property:crypto.ready=0
-    stop vendor.qseecomd
+on property:ro.crypto.fs_crypto_blkdev=*
+    stop qseecomd
     stop keymaster-4-0
     stop gatekeeper-1-0
-    stop servicemanager
+    
+on property:twrp.all.users.decrypted=true 
+    stop sbinqseecomd
+    stop keymaster-4-0
+    stop gatekeeper-1-0    
 
 on property:crypto.ready=1
     start vendor.qseecomd
@@ -145,3 +151,8 @@ on property:vendor.sys.listeners.registered=true
     start keymaster-4-0
     start gatekeeper-1-0
     start servicemanager
+    
+on property:ro.crypto.fs_crypto_blkdev=*
+    stop qseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
