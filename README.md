@@ -48,5 +48,6 @@ lunch twrp-alioth_eng && mka adbd bootimage
 
 
 
-## Thanks
+## Credits
 - [Original Tree By Nebrassy](https://github.com/TeamWin/android_device_xiaomi_alioth)
+- [ArrowOS kernel](https://github.com/ArrowOS-Devices/android_kernel_xiaomi_alioth)
