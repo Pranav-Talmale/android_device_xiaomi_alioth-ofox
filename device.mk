@@ -73,7 +73,6 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
     vendor/qcom/opensource/commonsys-intf/display
 
 # Crypto
