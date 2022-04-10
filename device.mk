@@ -38,6 +38,7 @@ AB_OTA_PARTITIONS += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
+    checkpoint_gc \
     update_engine \
     update_engine_sideload \
     update_verifier
@@ -62,7 +63,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd 
 
 # Qcom decryption
