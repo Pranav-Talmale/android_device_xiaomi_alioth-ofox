@@ -1,0 +1,38 @@
+name: TWRP CI
+on:
+  workflow_dispatch:
+    inputs:
+    
+env:
+  MANIFEST: "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1"
+  # Recovery Manifest URL with -b branch
+  DT_LINK: "https://github.com/Pranav-Talmale/device_xiaomi_alioth-twrp.git"
+  # Your Device Tree Link
+  VENDOR: "xiaomi"
+  # Your Device's Vendor name as in used inside DT. Example: xiaomi, samsung, asus, etc.
+  CODENAME: "alioth"
+  # Your Device's Codename as in used inside DT." Example: nikel, phoenix, ginkgo, etc.
+  #KERNEL_LINK: "https://github.com/SHRP-Devices/android_kernel_xiaomi_alioth"
+  # Kernel repo link with optional -b branch. Only for building kernel from source. Ignore if using prebuilt.
+  TARGET: "adbd bootimage"
+  # Set as recoveryimage (or bootimage if no recovery partition avaiable)
+  FLAVOR: "eng"
+  # eng by default, change the variable if you want userdebug
+  SOURCE: "twrp"
+  # Set as omni (or twrp if using v3_11.0)
+  EXTRA_CMD: ""
+  # For qualcomm FDE devices put git clone https://github.com/omnirom/android_vendor_qcom_opensource_commonsys --depth=1 -b android-9.0 vendor/qcom/opensource/commonsys in EXTRA CMD
+  # If you want to Execute any external Command Before Compilation Starts
+  TZ: "Asia/Kolkata"
+  TOKEN: ${{ secrets.BOTTOKEN }}
+
+jobs:
+  shrpCI:
+    runs-on: ubuntu-20.04
+
+    steps:
+       - name: Cleaning Up Runner
+         uses: rokibhasansagar/slimhub_actions@main
+
+       - name: Recovery Compilation
+         uses: SHRP-Devices/Recovery-Compiler@release
