@@ -43,7 +43,7 @@ You can find a full compile guide for OrangeFox [Here](https://wiki.orangefox.te
 
 Lunch command :
 ```
-lunch twrp-alioth_eng && mka adbd bootimage
+lunch twrp_alioth-eng && mka adbd bootimage
 ```
 
 
